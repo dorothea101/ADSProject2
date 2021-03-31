@@ -1,4 +1,0 @@
-﻿  Main.cpp
-D:\DATA STRUCTURES AND ALGORITHYMS\FirstAttempt\ADS103_Question1_Assessment2_DorotheaLeite_1\Main.cpp(13,13): warning C4326: return type of 'main' should be 'int' instead of 'void'
-D:\DATA STRUCTURES AND ALGORITHYMS\FirstAttempt\ADS103_Question1_Assessment2_DorotheaLeite_1\Main.cpp(66,20): warning C4018: '<': signed/unsigned mismatch
-  ADS103_Question1_Assessment2_DorotheaLeite_1.vcxproj -> D:\DATA STRUCTURES AND ALGORITHYMS\FirstAttempt\ADS103_Question1_Assessment2_DorotheaLeite_1\Debug\ADS103_Question1_Assessment2_DorotheaLeite_1.exe
