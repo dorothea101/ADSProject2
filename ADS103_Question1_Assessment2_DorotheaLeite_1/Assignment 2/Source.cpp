@@ -112,6 +112,8 @@ void quickSort(int a[], int low, int high, int order)
 void main()
 {
 	ifstream readFile;
+	ofstream  writeFile;
+	writeFile.open("output-a1q1.txt");
 	readFile.open("input-a1q1.txt");
 	int order;
 	readFile >> order;
@@ -121,39 +123,56 @@ void main()
 	readFile >> sizeOfArray;
 
 
-	int* arr = new int[sizeOfArray];
-	for (int i = 0; i < sizeOfArray; i++)
-	{
-		readFile >> arr[i];
-	}
-	if (order != 0 || order != 1)
+	
+	if (order != 0 && order != 1)
 	{
 		cout << "Error encounetered! should be a 0 or 1 in line 1" << endl;
 		return;
 	}
-	if (complexity != 0 || complexity != 1)
+	if (complexity != 0 && complexity != 1)
 	{
 		cout << "Error encounetered! should be a 0 or 1 in line 2" << endl;
 		return;
 	}
+	if (sizeOfArray < 0)
+	{
+		cout << "line 3 cannot be a negative numbser!" << endl;
+		return;
+	}
+
+	int* arr = new int[sizeOfArray];
+	for (int i = 0; i < sizeOfArray; i++)
+	{
+		readFile >> arr[i];
+		if (i < (sizeOfArray - 1))
+			if (readFile.eof())
+			{
+				cout << "There are not the right quantity of numbers in line 4 !" << endl;
+				return;
+			}
+	}
 
 	if (complexity == 0)
 	{
+		std::chrono::steady_clock::time_point begin = std::chrono::steady_clock::now();
 		bubbleSort(arr, sizeOfArray, order);
+		std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
+		writeFile << "Milliseconds = " << std::chrono::duration_cast<std::chrono::milliseconds>(end - begin).count() << std::endl;
+		for (int i = 0; i < sizeOfArray; i++)
+		{
+			writeFile << arr[i] << " ";
+		}
 	}
 	else if(complexity ==1)
-	{ 
+	{
+		std::chrono::steady_clock::time_point begin = std::chrono::steady_clock::now();
 		quickSort(arr, 0, sizeOfArray, order);
+		std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
+		writeFile << "Milliseconds = " << std::chrono::duration_cast<std::chrono::milliseconds>(end - begin).count() << std::endl;
+		for (int i = 0; i < sizeOfArray; i++)
+		{
+			writeFile << arr[i] << " " ;
+		}
 	}
-
-
-	//quickSort(arr, 0, sizeOfArray, order);
-	//bubbleSort(arr, sizeOfArray, order);
-	//displayArray(arr, sizeOfArray);
-
-
-
-
-
 	system("pause");
 }
