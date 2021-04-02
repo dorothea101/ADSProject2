@@ -11,5 +11,8 @@ public:
 
 	Node* next;
 
+	Node();
+	Node(int number);
+
 };
 
