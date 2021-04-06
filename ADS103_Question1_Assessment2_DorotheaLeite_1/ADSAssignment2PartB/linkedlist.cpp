@@ -37,6 +37,12 @@ void linkedlist::insertAtBeginning(int number)
 
 void linkedlist::insertAtEnd(int number)
 {
+	if (head == NULL)
+	{
+		insertAtBeginning(number);
+		return;
+	}
+
 	Node* newNode = new Node(number);
 	Node* iterator = head;
 	while (iterator->next != NULL)

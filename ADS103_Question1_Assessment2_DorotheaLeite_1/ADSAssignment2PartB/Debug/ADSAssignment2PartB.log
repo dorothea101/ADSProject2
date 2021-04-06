@@ -1,7 +1,3 @@
 ﻿  Source.cpp
 D:\DATA STRUCTURES AND ALGORITHYMS\Assignemt2\My Assignment\ADS103_Question1_Assessment2_DorotheaLeite_1\ADSAssignment2PartB\Source.cpp(12,13): warning C4326: return type of 'main' should be 'int' instead of 'void'
-D:\DATA STRUCTURES AND ALGORITHYMS\Assignemt2\My Assignment\ADS103_Question1_Assessment2_DorotheaLeite_1\ADSAssignment2PartB\Source.cpp(23,46): warning C4552: '+': result of expression not used
-D:\DATA STRUCTURES AND ALGORITHYMS\Assignemt2\My Assignment\ADS103_Question1_Assessment2_DorotheaLeite_1\ADSAssignment2PartB\Source.cpp(30,46): warning C4552: '+': result of expression not used
-D:\DATA STRUCTURES AND ALGORITHYMS\Assignemt2\My Assignment\ADS103_Question1_Assessment2_DorotheaLeite_1\ADSAssignment2PartB\Source.cpp(37,46): warning C4552: '+': result of expression not used
-D:\DATA STRUCTURES AND ALGORITHYMS\Assignemt2\My Assignment\ADS103_Question1_Assessment2_DorotheaLeite_1\ADSAssignment2PartB\Source.cpp(45,46): warning C4552: '+': result of expression not used
   ADSAssignment2PartB.vcxproj -> D:\DATA STRUCTURES AND ALGORITHYMS\Assignemt2\My Assignment\ADS103_Question1_Assessment2_DorotheaLeite_1\ADSAssignment2PartB\Debug\ADSAssignment2PartB.exe
